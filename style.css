@@ -1,0 +1,407 @@
+/* ====== Reset ====== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Noto Serif KR", system-ui, sans-serif;
+}
+
+.question,
+.statement-title{
+  font-family: "Noto Serif KR", serif;
+}
+
+.scroll-indicator{
+  pointer-events: none;
+}
+
+.hero{
+  height:100vh;
+  width:100vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  position:relative;
+  z-index:10;
+}
+
+.main-body{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  pointer-events:none;
+  filter: contrast(1.05);
+}
+
+.interview-content{
+  position: relative;
+}
+
+.interview-content{
+  background:#fff;
+  max-height:80vh;
+  overflow-y:auto;
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+.typing-box{
+  max-height: 300px;
+  overflow-y: auto;
+}
+/* hotspot */
+.hotspot{
+  position:absolute;
+  cursor:pointer;
+  opacity:0;
+}
+
+.head  {top:  8%; left:42%; width:18%; height:18%;}
+.chest {top: 32%; left:39%; width:22%; height:22%;}
+.legs  {top: 58%; left:41%; width:20%; height:22%;}
+.feet  {top: 84%; left:43%; width:16%; height:16%;}
+
+
+/* ====== Icon Group ====== */
+
+.icon-group{
+  position: relative;
+  z-index:1;
+
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+  margin:24px auto 16px;
+
+  pointer-events:none; /* hero 클릭 방해 금지 */
+}
+
+.icon-group a{
+  pointer-events:auto;
+}
+
+.icon-btn img{
+  width:150px;
+  height:auto;
+  cursor:pointer;
+  transition:transform .2s ease, opacity .2s ease;
+}
+
+.icon-btn img:hover{
+  transform:scale(1.12);
+  opacity:0.9;
+}
+
+
+/* ====== Statement ====== */
+
+.statement-section{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+}
+
+.statement-inner{
+  margin-top:10vh;
+  max-width:900px;
+  padding:0 24px 80px;
+  text-align:center;
+  line-height:1.8;
+}
+
+.statement-title{
+  font-size:50px;
+  margin-bottom:24px;
+  font-weight:700;
+}
+
+.statement-body{
+  font-size:16px;
+  color:#333;
+}
+
+
+/* ====== Interview Overlay ====== */
+
+#interview-screen{
+  position:fixed;
+  inset:0;
+  background:rgba(255,255,255,0.9);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  padding:24px;
+  backdrop-filter:blur(4px);
+  z-index:100;
+}
+
+#interview-screen.show{
+  display:flex;
+}
+
+.interview-content{
+  max-width:900px;
+  width:100%;
+  background:#fff;
+  border:1px solid #ddd;
+  padding:24px 24px 32px;
+}
+
+.interview-header{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:16px;
+}
+
+#artist-name{
+  font-size:24px;
+  font-weight:600;
+}
+
+#artist-desc{
+  font-size:14px;
+  color:#555;
+}
+
+.close-btn{
+  border:none;
+  background:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+.artist-images{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.artist-images img{
+  width:120px;
+  height:outo;
+  object-fit:contain;
+  border:1px solid #ddd;
+}
+
+.typing-box{
+  font-size:16px;
+  line-height:1.8;
+  white-space:pre-line;
+}
+
+
+/* ====== Common Interview ====== */
+
+.common-interview{
+  max-width:900px;
+  margin:80px auto 120px;
+  padding:0 24px;
+}
+
+.interview-title{
+  font-size:50px;
+  margin-bottom:48px;
+  text-align:center;
+}
+
+.question-block{
+  margin-bottom:120px;
+}
+
+.question{
+  font-size:20px;
+  margin-bottom:24px;
+}
+
+.answer{
+  margin-bottom:20px;
+}
+
+.answer strong{
+  font-size:14px;
+  display:block;
+  margin-bottom:4px;
+}
+
+.answer p{
+  font-size:15px;
+  line-height:1.7;
+}
+
+
+/* ====== Gallery (gallery.html only) ====== */
+
+
+/* ====== Gallery hover: 원본 비율 유지 ====== */
+
+.gallery-view{
+  overflow: visible;
+}
+
+.gallery-view img{
+  width: 100%;
+  height: 160px;
+  object-fit: cover;     /* 기본은 썸네일 */
+  cursor: zoom-in;
+  transition: all .25s ease;
+}
+
+.gallery-view img:hover{
+  position: relative;
+  z-index: 10;
+
+  width: auto;
+  height: auto;
+
+  max-height: 20vh;   /* 👈 디테일 확인에 최적 */
+  max-width: 65vw;
+
+  object-fit: contain;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.2);
+}
+
+
+.gallery-view{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(160px,1fr));
+  gap:12px;
+  max-width:900px;
+  margin:0 auto 60px;
+  padding:0 24px;
+}
+
+.gallery-view img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery-view img:hover{
+  transform:scale(3);
+  z-index:10;
+  box-shadow:0 12px 30px rgba(0,0,0,0.25);
+}
+
+.back-btn{
+  position:fixed;
+  top:20px;
+  left:20px;
+  z-index:100;
+  padding:8px 12px;
+  border:1px solid #000;
+  background:#fff;
+  text-decoration:none;
+  color:#blue;
+}
+
+.back-btn:hover{
+  background:#000;
+  color:#fff;
+}
+
+
+/* ====== Mobile ====== */
+
+@media (max-width:768px){
+  .statement-inner{
+    margin-top:28vh;
+  }
+
+  .interview-content{
+    padding:18px 16px;
+  }
+
+  .typing-box{
+    font-size:15px;
+  }
+}
+
+
+/* 클릭 유도 힌트 */
+.click-hint{
+  position: absolute;
+  font-size: 12px;
+  letter-spacing: .08em;
+  color: #111;
+  opacity: .6;
+  cursor: pointer;
+  pointer-events: none; /* 클릭은 hotspot이 받게 */
+}
+
+/* 점 */
+.click-hint::before{
+  content:"";
+  display:inline-block;
+  width:6px;
+  height:6px;
+  background:#111;
+  border-radius:50%;
+  margin-right:6px;
+  animation: pulse 1.6s infinite;
+}
+
+/* 살짝 숨쉬는 애니메이션 */
+@keyframes pulse{
+  0%{ opacity:.2; }
+  50%{ opacity:.8; }
+  100%{ opacity:.2; }
+}
+
+/* 위치 조정 (이미지 기준으로 미세 조정) */
+.head-hint  { top: 18%; left: 90%; }
+.chest-hint { top: 40%; left: 90%; }
+.legs-hint  { top: 65%; left: 90%; }
+.feet-hint  { top: 88%; left: 90%; }
+
+
+/* ================== LIGHTBOX ================== */
+#lightbox{
+  position: fixed;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.85);
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+#lightbox.show{
+  display: flex;
+}
+
+#lightbox .lightbox-img{
+  max-width: 92vw;
+  max-height: 88vh;
+  object-fit: contain;
+  cursor: default;
+}
+
+#lightbox .lightbox-close{
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  font-size: 38px;
+  line-height: 1;
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+/* ================== /LIGHTBOX ================== */
+
+/* ====== Custom Cursor ====== */
+body{
+  cursor: url("커서.png") 16 16, auto;
+}

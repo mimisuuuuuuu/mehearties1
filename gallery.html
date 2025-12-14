@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MeHearties – Gallery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a href="MEHEARTIES_2025.html" class="back-btn">
+  ← Back
+</a>
+<section class="gallery-view show" id="gallery"></section>
+
+<script>
+  const gallery = document.getElementById("gallery");
+
+  const pngImages = [34, 44]; // png인 번호들
+
+  for (let i = 1; i <= 61; i++) {
+    const img = document.createElement("img");
+    const num = String(i).padStart(2, "0");
+
+    const ext = pngImages.includes(i) ? "png" : "jpg";
+    img.src = `image2/${num}.${ext}`;
+
+    gallery.appendChild(img);
+  }
+</script>
+
+
+</body>
+</html>
