@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>MeHearties</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/gh/sunn-us/SUIT/fonts/variable/woff2/SUIT-Variable.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- 1. 메인 크리쳐 이미지 -->
+<section class="hero">
+  <img src="최종이미지.png" class="main-body" alt="MeHearties creature drawing">
+
+
+
+  <!-- 클릭 영역 (머리/상체/다리/발) -->
+  <div class="hotspot head"  data-target="h"  aria-label="신혜령 인터뷰 열기"></div>
+  <div class="hotspot chest" data-target="hs" aria-label="최한수 인터뷰 열기"></div>
+  <div class="hotspot legs"  data-target="sy" aria-label="임성연 인터뷰 열기"></div>
+  <div class="hotspot feet"  data-target="js" aria-label="김지수 인터뷰 열기"></div>
+  <div class="click-hint head-hint">Head</div>
+  <div class="click-hint chest-hint">Chest</div>
+  <div class="click-hint legs-hint">Legs</div>
+  <div class="click-hint feet-hint">Feet</div>
+
+
+  <!-- 스크롤 안내 -->
+  <div class="scroll-indicator">
+    <span></span>
+  </div>
+
+</section>
+
+
+<!-- ====== Icon Group (추가) ====== -->
+<div class="icon-group">
+
+  <!-- 기존 갤러리 아이콘 (유지) -->
+  <a
+    href="gallery.html"
+    target="_blank"
+    class="icon-btn"
+    aria-label="갤러리 열기"
+  >
+    <img src="icon.png" alt="Gallery icon">
+  </a>
+<a
+  href="#common-interview"
+  class="icon-btn interview-icon"
+  aria-label="인터뷰 보기"
+>
+  <img src="icon2.png" alt="Interview icon">
+</a>
+
+
+</div>
+
+<section id="interview-screen" aria-hidden="true">
+  <div class="interview-content">
+    <header class="interview-header">
+      <div>
+        <h2 id="artist-name"></h2>
+        <p id="artist-desc"></p>
+      </div>
+      <button class="close-btn" aria-label="닫기">×</button>
+    </header>
+
+    <div id="artist-images" class="artist-images"></div>
+
+    <div class="typing-box">
+      <p id="typing-text"></p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- 2. 단체전 스테이트먼트 -->
+<section class="statement-section">
+  <div class="statement-inner">
+
+    <h1 class="statement-title">MeHearties</h1>
+    <p class="statement-body">
+우리는 각기 다른 매체와 서로 다른 시선,
+다른 태도를 가지고 출발했다.
+
+그러나 함께라는 이름 아래,
+우리는 <b>조화와 연결</b>을 탐구한다.
+
+서로의 감각을 존중하고,
+공동의 언어를 만들기 위해
+대화하고, 실험하고, 기록한다.
+
+하나의 신체를 조립하듯
+우리는 서로의 가능성을 결합하며
+새로운 생명성을 부여한다.
+
+<b>네 개의 세계는 결국 ‘하나’가 된다.</b>
+<b>MeHearties</b> — 우리의 연결이자, 우리의 정체성.
+    </p>
+  </div>
+</section>
+
+<!-- ================= 공통 인터뷰 ================= -->
+<section id="common-interview" class="common-interview">
+
+  <h2 class="interview-title">Common Questions</h2>
+
+  <!-- 질문 1 -->
+  <div class="question-block">
+    <h3 class="question">
+      Q1. 너는 우리가 서로에게 어떤 존재라고 생각해?감정적인 의미든, 작업적인 의미든, 이번 전시를 계기로 달라진 점이 있다면 말해줘.
+    </h3>
+
+    <div class="answer">
+      <strong>신혜령</strong>
+      <p>매순간 많이 배우고 있어. 나는 우리 넷이 서로 너무 다르지만서도 관 계에서 존중이 가장 크게 자리잡혀있다고 생각해. 때문에 나에게 없 는 것들을 이 아이들이 채워준다기보다는 세계를 바라보는 방식이 넓 어진 것 같아. 그게 내 안에 저절로 들어와서 내가 무한해질 수 있다는 감각을 받아.
+</p>
+    </div>
+
+    <div class="answer">
+      <strong>최한수</strong>
+      <p>서로가 가진 세상을 궁금해하고 존중하며 동시에 확장시키는 존재가 된다는 것. 나라는 개인이 가진 차별성을 발굴해 주는 존재. 함께하는 모든 것들은 그 과정에서의 즐거움을 잃지 않도록 서로 지탱해 줄 수가 있어. </p>
+    </div>
+
+    <div class="answer">
+      <strong>임성연</strong>
+      <p>최근에 읽은 책에서 이런 문장을 만났다. 
+“무료하고 긴 하루하루로 이어진 시간, 아무리 노래를 부르고 그네를 타도, 공상에 빠져 이야기를 지어내도, 자신들이 작가이고 감독이고 배우이고 관객인 연극을 해도, 갈 수 있는 한 가장 먼 거리까지 달려간다 해도, 메워지지 않았던 커다랗고 텅 빈 그 무용한 시절을 함께했다는 이유만으로.” 
+나는 이 문장이 우리를 잘 표현한다고 생각한다. 뚜렷하게 무엇 하나 잡히지 않는 시절을 함께 지나왔다는 것. 서로에게 기대고 의지한다. 이번 전시는 그 관계를 감각 가능한 형태로 더 분명하게 만든 계기였다. 
+</p>
+    </div>
+
+    <div class="answer">
+      <strong>김지수</strong>
+      <p> 각자가 가진 이상함에 대해서 가장 편하게 말할 수 있는 사이. 혹은 각자가 가게 될 길, 가고 싶은 길에 대해서 솔직하게 터놓고 공유할 수 있는 사이. 그래서 서로의 각기 다른 드로잉이 모여서 하나의 개성 있는 그림이 되고 서로의 것을 굳이 변형시키지 않고도 멋진 하나의 크리쳐를 만들어냄. </p>
+    </div>
+  </div>
+
+  <!-- 질문 2 -->
+  <div class="question-block">
+    <h3 class="question">
+      Q2. 우리가 가진 농담, 버릇, 작업 습관 같은 ‘사소한 관계성’이 결과물에 어떻게 스며들었다고 생각해?
+    </h3>
+
+    <div class="answer">
+      <strong>신혜령</strong>
+      <p>포스터 속 그림이 답해준다고 생각해.</p>
+    </div>
+
+    <div class="answer">
+      <strong>최한수</strong>
+      <p>개인으로서의 나는 내가 가진 결함들을 제거하길 바라는 사람이었어. 그러나 이들 안에서 나는 그 결함을 좀 더 천천히 두고 보게 되었던거 같아. 혹여 이 결함들이 내가 만들어가는 것들의 중요한 한 조각이 될지도 모른다는 것을 이들이 일깨워주기 때문이겠지.</p>
+    </div>
+
+    <div class="answer">
+      <strong>임성연</strong>
+      <p>서로의 세계가 완전히 다른 네 명이 모여 하나의 크리쳐를 만들었다. 그 크리쳐는 우리의 일부이자, 어떤 방식으로는 우리의 초상이다. 각자의 다른 유머와 감성, 작업하는 방식이 섞이고 겹치면서 하나의 결과가 나왔다. 중요한 건, 그 차이들이 존중받고 인정된 상태로 조합되었다는 점이다. </p>
+    </div>
+
+    <div class="answer">
+      <strong>김지수</strong>
+      <p>사소한 농담, 반복되는 말버릇, 작업할 때의 각자의 태도가 쌓이면서 서로의 기준을 이미 공유하고 있다고 생각함. 그래서 작업을 할 때 타협이나 설득해야 할 지점은 많이 없었고, 서로를 존중하며 네 명의 개성과 방식이 자연스럽게 공존할 수 있는 형태가 만들어졌다고 생각함. </p>
+    </div>
+  </div>
+
+  <!-- 질문 3 -->
+  <div class="question-block">
+    <h3 class="question">
+      Q3. 마지막으로, 이 전시가 끝난 뒤에도 우리가 계속해서 가지고 있을 ‘함께 만든 무언가’가 있다면, 그건 뭐라고 생각해?
+    </h3>
+
+    <div class="answer">
+      <strong>신혜령</strong>
+      <p>서로를 만들지 않았을까 싶어 많은 영향을 받았고 영원히 지금과 같 은 거리를 유지할 수 없다는건 알지만 내 안에는 영원히 너희들이 있 을거야 어떤 방식으로든 ...</p>
+    </div>
+
+    <div class="answer">
+      <strong>최한수</strong>
+      <p>설령 다른 방향을 향하고 있는 상태가 되더라도 지금껏 그래왔듯 우리는 늘 서로를 통해 더 발전할거야. 서로가 하나의 대상을 힘을 모아 만들지 않더라도 함께 지나온 시간과 축적된 감각이 우리를 계속 앞으로 밀어줄 것이라 믿어. 
+</p>
+    </div>
+
+    <div class="answer">
+      <strong>임성연</strong>
+      <p>함께 보낸 시간들, 서로에게서 배운 점들, 그리고 서로를 사랑하게 된 방식들. 나에게는 그게 쉽게 사라지지 않는 깊게 남는 뿌리 같은 것으로 남을 것 같다. 
+</p>
+    </div>
+
+    <div class="answer">
+      <strong>김지수</strong>
+      <p> ’솔직함‘과 ’ 작업에 대한 열정‘이라고 생각함. 그게 아마 우리가 특별할 수 있는 부분이라고 생각하고.. 작업에 대해서든, 서로에 대해서든 애매하게 넘기지 않고 말할 수 있는 태도, 좋고 싫음을 숨기지 않는 방식이 우리 사이에 남아 있을 것 같음. 그리고 작업 앞에서는 끝까지 고민하고 밀어붙이는 태도가 함께 남아 있을 것 같음. 그 두 가지 태도가 앞으로 각자 다른 작업을 하게 되더라도, 언제든 다시 함께 무언가를 만들 수 있게 해주는 기반이라고 생각함. </p>
+    </div>
+  </div>
+
+</section>
+
+
+<script src="interview.js"></script>
+</body>
+</html>
+
+
